@@ -1,0 +1,93 @@
+/* Todo Item */
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  font-size: 1rem;
+  background-color: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.todo-item.completed * {
+  color: lightgray;
+}
+
+.todo-item .checkbox {
+  margin-right: 0.5rem;
+}
+
+.todo-item .title,
+.todo-item .textfield {
+  margin-right: auto;
+}
+
+.todo-item .textfield {
+  display: none;
+}
+
+.todo-item.completed .title {
+  text-decoration: line-through;
+}
+
+.todo-item.editing .checkbox,
+.todo-item.editing .title {
+  display: none;
+}
+
+.todo-item.editing .textfield {
+  display: block;
+  flex: 1;
+  margin-right: 16px;
+}
+
+.todo-item button {
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.todo-item:hover button:not(.checkbox) {
+  opacity: 1;
+}
+
+.beach {
+  display: inline-block;
+}
+
+.beach img {
+  width: 500px;
+  height: 400px;
+}
+
+.ocean {
+  display: inline-block;
+  width: 500px;
+  height: 400px;
+  background-image: url('../img/webp/okean-mostjpg.webp');
+  // background-image: url("../img/svg/icon-toy.svg");
+  background-size: cover;
+}
+
+/* Todo form */
+
+#todo-form {
+  display: flex;
+  padding: 10px;
+  background-color: #fafafa;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#todo-form input {
+  flex: 1;
+  transition: all 0.2s;
+  outline: none;
+}
+
+#todo-form input:focus {
+  border: 1px solid #f0db4f;
+}
+
+#todo-form button {
+  margin-left: 10px;
+}
