@@ -1,0 +1,44 @@
+{
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "htmlacademy/es6",
+    "prettier"
+  ],
+  "rules": {
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": true
+      }
+    ],
+    "no-invalid-this": 0,
+    "linebreak-style": "off",
+    "arrow-parens": "off",
+    "object-curly-newline": "off",
+    "no-mixed-operators": "off",
+    "arrow-body-style": "off",
+    "function-paren-newline": "off",
+    "no-plusplus": "off",
+    "space-before-function-paren": 0,
+    "no-console": "warn",
+    "no-alert": "warn",
+    "no-param-reassign": "off",
+    "radix": "off"
+  },
+  "plugins": [
+    "prettier"
+  ]
+}
