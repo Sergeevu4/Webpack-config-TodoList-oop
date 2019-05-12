@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "stylelint-config-htmlacademy",
+    "stylelint-config-prettier"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "indentation": 2,
+    "number-leading-zero": null,
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": [
+          "composes"
+        ]
+      }
+    ]
+  }
+}
