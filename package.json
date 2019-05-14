@@ -64,16 +64,17 @@
   },
   "lint-staged": {
     "**/*.js": [
-      "node_modules/.bin/eslint --max-warnings=0",
+      "node_modules/.bin/eslint --max-warnings=5",
       "git add"
     ],
-    "scss/**/*.scss": [
+    "src/**/*.{css, scss}": [
       "stylelint --fix --config .stylelintrc-format.json",
       "git add"
     ]
   },
   "browserslist": [
     "> 1%",
-    "last 3 version"
+    "last 3 version",
+    "ie 11"
   ]
 }
