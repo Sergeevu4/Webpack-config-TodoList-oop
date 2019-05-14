@@ -257,8 +257,8 @@ class View extends EventEmittet {
   // # Метод удаления элемента списка
   removeItem(id) {
     const listItem = this.findListItem(id);
-    // this.list.removeChild(listItem);
-    listItem.remove();
+    this.list.removeChild(listItem);
+    // listItem.remove();
   }
 }
 
