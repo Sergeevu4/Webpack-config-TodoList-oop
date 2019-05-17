@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const LodashReplacementPlugin = require('lodash-webpack-plugin');
 
 const PATHS = {
   src: path.join(__dirname, '../src'), // .. потому что  конфиги находятся в папке webpack-build
@@ -94,12 +95,10 @@ module.exports = {
 
   plugins: [
     new StyleLintPlugin({
-      // configFile: '.stylelintrc',
       context: 'src',
       syntax: 'scss',
       files: 'scss/*.scss',
       quiet: false,
-      // failOnError: true,
       emitErrors: false, // by default this is to true to check the CSS lint errors
     }),
     new MiniCssExtractPlugin({
@@ -121,6 +120,11 @@ module.exports = {
       $: 'jquery/dist/jquery.min.js',
       jQuery: 'jquery/dist/jquery.min.js',
       'window.jQuery': 'jquery/dist/jquery.min.js',
+    }),
+    new LodashReplacementPlugin({
+      // Плагин для сжатия функции Lodash
+      collections: true,
+      paths: true,
     }),
   ],
 };
