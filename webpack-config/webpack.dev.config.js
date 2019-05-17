@@ -10,7 +10,6 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   // BUILD settings gonna be here
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
-  // devtool: 'eval-source-map',
   devServer: {
     contentBase: baseWebpackConfig.externals.paths.public, // где будет открываться webpack
     port: 8081,
@@ -20,9 +19,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       maxModules: 0,
     },
     overlay: {
-      hot: true,
+      errors: true,
       // warnings: false,
-      // errors: true,
     },
   },
   plugins: [
