@@ -1,5 +1,6 @@
 // ! Этот файл (базовый для мерджа) будет использоваться и dev в build
 const path = require('path');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -116,5 +117,10 @@ module.exports = {
       { from: `${PATHS.src}/static`, to: `` },
       { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
     ]),
+    new webpack.ProvidePlugin({
+      $: 'jquery/dist/jquery.min.js',
+      jQuery: 'jquery/dist/jquery.min.js',
+      'window.jQuery': 'jquery/dist/jquery.min.js',
+    }),
   ],
 };
