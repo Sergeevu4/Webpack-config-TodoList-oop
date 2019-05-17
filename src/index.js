@@ -13,6 +13,12 @@ import './scss/style.scss';
 import { lodashMethod, standardMethod } from './js/lodash-example';
 lodashMethod();
 standardMethod();
+
+// Пример использования jquery
+jQuery(document).ready(function($) {
+  $('body').css('background-color', 'orange');
+});
+
 const state = load(); // загружаем данные из хранилища
 /*
   undefined - необходим для того, чтобы в Model произошло присваивание по умолчанию
