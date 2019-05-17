@@ -9,6 +9,10 @@ import { save, load } from './js/helpers';
 // import './css/app.css';
 import './scss/style.scss';
 
+// Пример импорта функции из Lodash
+import { lodashMethod, standardMethod } from './js/lodash-example';
+lodashMethod();
+standardMethod();
 const state = load(); // загружаем данные из хранилища
 /*
   undefined - необходим для того, чтобы в Model произошло присваивание по умолчанию
@@ -30,6 +34,8 @@ model.on('change', (changeState) => save(changeState));
 */
 
 const view = new View();
+
+// eslint-disable-next-line no-unused-vars
 const controller = new Controller(model, view);
 
 /*
