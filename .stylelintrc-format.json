@@ -1,23 +1,18 @@
 {
-  "extends": [
-    "stylelint-config-htmlacademy",
-    "stylelint-config-prettier"
-  ],
-  "plugins": [
-    "stylelint-order"
-  ],
+  "extends": ["stylelint-config-htmlacademy", "stylelint-config-prettier"],
+  "plugins": ["stylelint-order"],
   "rules": {
     "indentation": 2,
     "number-leading-zero": null,
     "property-no-unknown": [
       true,
       {
-        "ignoreProperties": [
-          "composes"
-        ]
+        "ignoreProperties": ["composes"]
       }
     ],
     "order/properties-order": [
+      "content",
+      "box-sizing",
       "position",
       "z-index",
       "top",
@@ -26,6 +21,12 @@
       "left",
       "display",
       "float",
+      "width",
+      "min-width",
+      "max-width",
+      "height",
+      "min-height",
+      "max-height",
       "flex",
       "flex-direction",
       "flex-wrap",
@@ -35,14 +36,18 @@
       "flex-grow",
       "flex-basis",
       "order",
+      "grid",
+      "grid-area",
+      "grid-auto-*",
+      "grid-column",
+      "grid-column-*",
+      "grid-gap",
+      "grid-row",
+      "grid-row-*",
+      "grid-template",
+      "grid-template-*",
       "flex-pack",
       "clear",
-      "width",
-      "min-width",
-      "max-width",
-      "height",
-      "min-height",
-      "max-height",
       "margin",
       "margin-top",
       "margin-right",
@@ -59,7 +64,6 @@
       "visibility",
       "clip",
       "zoom",
-      "box-sizing",
       "table-layout",
       "empty-cells",
       "caption-side",
