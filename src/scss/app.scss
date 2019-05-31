@@ -51,26 +51,26 @@
   opacity: 1;
 }
 
-.beach {
-  display: inline-block;
+.image-list {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: white;
 }
 
-.beach img {
-  width: 500px;
-  height: 400px;
+.image-list__item {
+  width: 45%;
 }
 
-.ocean {
-  display: inline-block;
-  width: 500px;
-  height: 400px;
+.image-list__item--ocean {
   background-image: url('../img/webp/okean-mostjpg.webp');
-  // background-image: url("../img/svg/icon-toy.svg");
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
 /* Todo form */
 
+// stylelint-disable
 #todo-form {
   display: flex;
   padding: 10px;
@@ -80,8 +80,8 @@
 
 #todo-form input {
   flex: 1;
-  transition: all 0.2s;
   outline: none;
+  transition: all 0.2s;
 }
 
 #todo-form input:focus {

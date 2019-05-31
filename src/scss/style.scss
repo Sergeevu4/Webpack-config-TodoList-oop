@@ -1,11 +1,17 @@
 @import 'app.scss'; // пример импорта scss файлов
 
 body {
-  margin: 0;
+  max-width: 1140px;
+  margin: 0 auto;
   padding: 1em;
   font-family: 'Consolas', 'Arial', 'Helvetica', sans-serif;
   color: #757575;
   background-color: #fdaaff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 ul {
@@ -15,13 +21,18 @@ ul {
 }
 
 button {
-  position: relative;
   display: inline-block;
+  position: relative;
   min-width: 64px;
   height: 36px;
-  margin: 0;
-  padding: 0 16px;
   overflow: hidden;
+  margin: 0;
+  border: none;
+  padding: 0 16px;
+  transition:
+    box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
+    background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 14px;
   line-height: 36px;
   font-family: 'Consolas', 'Helvetica', 'Arial', sans-serif;
@@ -33,10 +44,7 @@ button {
   letter-spacing: 0;
   text-transform: uppercase;
   background: 0 0;
-  border: none;
   border-radius: 2px;
-  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
-    background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
   will-change: box-shadow;
   cursor: pointer;
@@ -54,10 +62,10 @@ button.icon {
   width: 32px;
   min-width: 32px;
   height: 32px;
+  overflow: hidden;
+  padding: 0;
   margin-right: 0;
   margin-left: 0;
-  padding: 0;
-  overflow: hidden;
   font-size: 24px;
   line-height: normal;
   border-radius: 50%;
@@ -74,21 +82,23 @@ button .material-icons {
 }
 
 input {
+  border: 1px solid lightgray;
   padding: 0.5em;
   font-size: 1rem;
   font-family: 'Consolas', 'Arial', 'Helvetica', sans-serif;
   color: #757575;
-  border: 1px solid lightgray;
   border-radius: 2px;
   outline: none;
 }
 
 main {
-  margin: 70px auto;
   overflow: hidden;
+  margin: 70px auto;
   background: #ffffff;
   border-radius: 2px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+  box-shadow:
+    0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2),
     0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
