@@ -59,7 +59,8 @@
     "style-test": "stylelint src/scss/**/*.scss",
     "style-fix": "stylelint --fix --config .stylelintrc-format.json src/scss/**/*.scss",
     "dev": "webpack-dev-server --open --config ./webpack-config/webpack.dev.config.js",
-    "build": "webpack --progress --config ./webpack-config/webpack.prod.config.js && gh-pages -d public",
+    "build": "webpack --progress --config ./webpack-config/webpack.prod.config.js",
+    "deploy": "gh-pages -d public",
     "image-min": "node image.min.js"
   },
   "husky": {
