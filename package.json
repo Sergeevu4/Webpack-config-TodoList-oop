@@ -23,6 +23,7 @@
     "eslint-config-prettier": "^4.2.0",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-prettier": "^3.0.1",
+    "gh-pages": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^2.2.0",
     "imagemin-mozjpeg": "^8.0.0",
@@ -58,7 +59,7 @@
     "style-test": "stylelint src/scss/**/*.scss",
     "style-fix": "stylelint --fix --config .stylelintrc-format.json src/scss/**/*.scss",
     "dev": "webpack-dev-server --open --config ./webpack-config/webpack.dev.config.js",
-    "build": "webpack --progress --config ./webpack-config/webpack.prod.config.js",
+    "build": "webpack --progress --config ./webpack-config/webpack.prod.config.js && gh-pages -d public",
     "image-min": "node image.min.js"
   },
   "husky": {
