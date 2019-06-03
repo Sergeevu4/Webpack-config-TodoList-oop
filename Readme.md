@@ -76,7 +76,7 @@ npm run lint-fix - eslint исправления ошибок (js)
 npm run style-test - stylelint проверка на возможные ошибки (scss)
 npm run style-fix - stylelint исправления ошибок (scss)
 npm run dev - запуск WebPack в режиме dev (Разработка)
-npm run dev build - запуск WebPack в режиме prod (Сборка)
+npm run build - запуск WebPack в режиме prod (Сборка)
 npm run deploy - загрузка скомпилированной папки Public, на GitHub Pages
 npm run image-min - оптимизация изображений
 ```
